@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actor_Info...!</title>
+</head>
+<body>
+    <h3>Actor_Information...!</h3>
+    <form action="http//:localhost:8000/actor/save" method="post">
+        ActorId:<input type="text" name="aid" value="{{}}"><br>
+        ActorName:<input type="text" name="anm" value="{{}}"><br>
+        ActorAge:<input type="text" name="aage" value="{{}}"><br>
+        ActorGendor:<input type="text" name="agen" value="{{}}"><br>
+        Movies List <select name="smov"multiple>
+                {% for mv in movies%}
+
+                 {% if mv. is none %}
+                            <option value="{{adr.id}}">{{adr.city}}>>{{adr.id}}</option>
+                {% elif adr.employee.id==emp.id %}
+                    <option selected value="{{adr.id}}">{{adr.city}}>>{{adr.id}}</option>
+                {% endif %}
+                    {% endfor %}
+                    </select><br><br>
+        <input type="submit">
+    </form>
+    <table border="2">
+        <thead>
+        <td>ActorId</td>
+        <td>ActorName</td>
+        <td>ActorAge</td>
+        <td>ActorGendor</td>
+        <td></td>
+        </thead>
+    </table>
+
+
+</body>
+</html>
